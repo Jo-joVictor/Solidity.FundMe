@@ -8,7 +8,7 @@ library PriceConverter {
     function getEthPrice(AggregatorV3Interface priceFeed) internal view returns (uint256) {
         (, int256 price,,,) = priceFeed.latestRoundData();
         // Chainlink returns 8 decimals, convert to 18
-        return uint256(price * 1e10); // e.g., $2,000.00000000 → $2,000 * 1e18
+        return uint256(price * 1e10); // i.e $3,800.00000000 → $3,800 * 1e18
     }
 
     //  Convert ETH to USD
